@@ -18,3 +18,9 @@
     grid-template-columns: repeat(var(--grid-cols), 0fr);
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
