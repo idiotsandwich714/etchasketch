@@ -1,9 +1,13 @@
-function drawingBoard() {
-    for (let i = 0; i <= 256; i++) {
+const container = document.getElementById('gridContainer');
+
+function createGrid(dimensions) {
+    container.style.setProperty('--grid-rows', dimensions);
+    container.style.setProperty('--grid-cols', dimensions);
+    for (let i = 0; i < (dimensions ** 2); i++) {
         const gridSquare = document.createElement('div');
         gridSquare.classList.add('gridSquare');
-        document.getElementById('gridContainer').appendChild(gridSquare);
+        container.appendChild(gridSquare);
     }
 }
 
-drawingBoard();
+createGrid(16);
